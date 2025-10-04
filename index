@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stuten → beste Hengste</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- PapaParse für robustes CSV-Parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Stuten → beste Hengste</h1>
+
+    <div class="controls">
+      <label>
+        Besitzer
+        <select id="ownerSelect">
+          <option value="">— Alle Besitzer —</option>
+        </select>
+      </label>
+
+      <label>
+        Stute
+        <select id="mareSelect">
+          <option value="">— Alle Stuten —</option>
+        </select>
+      </label>
+
+      <button id="computeBtn">Top 3 Hengste anzeigen</button>
+    </div>
+
+    <div id="info" class="info">
+      Lädt Daten... (wenn es länger dauert: kontrolliere, ob die Google Sheets als "veröffentlicht" stehen)
+    </div>
+
+    <div id="results"></div>
+    <footer>
+      Datenquellen: Hengste & Stuten (von dir veröffentlicht). 
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
